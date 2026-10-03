@@ -14,7 +14,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 25px;
-    
 }
 
 .menu a {
@@ -45,9 +44,6 @@ body {
     transform: translateY(-2px);
 }
 
-
-
-
 /* esto hace que la cabecera muestre la imagen con degradado oscuro */
 header {
     /* esto hace que se mezcle el degradado oscuro transparente con la imagen de fondo */
@@ -72,14 +68,12 @@ header h1 {
   margin-top: 40px; /* esto hace que se separe el titulo del menu */
 }
 
-
 header h1 span {
   font-family: 'Outfit', sans-serif;
   font-size: 40px;
   font-weight: bold;
   color: rgb(235, 220, 220);
 }
-
 
 /* esto hace que el contenedor de la nube y la caja sirva de referencia para posicionar elementos */
 .contenedor-nube {
@@ -98,9 +92,6 @@ header h1 span {
     height: auto;
     display: block;
 }
-
-
-
 
 /* esto hace que la caja de texto salga por la derecha detras de la nube */
 .caja-texto {
@@ -121,8 +112,6 @@ header h1 span {
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%);
     mask-image: linear-gradient(to right, transparent 0%, black 15%);
     border: 1.5px solid #551515 !important;
-    
-
 }
 
 /* esto hace que el texto dentro de la caja sea legible */
@@ -139,8 +128,6 @@ header h1 span {
     word-break: break-word;
 }
 
-
-
 /* esto hace que el contenedor principal organice las 3 cajas en fila */
 .contenerdor-cajas {
     display: flex;               /* esto hace que las 3 cajas se pongan una al lado de otra */
@@ -151,10 +138,11 @@ header h1 span {
     padding: 25px;               /* esto hace que haya un espacio interno alrededor de las cajas */
     border-radius: 15px;         /* esto hace que el contenedor tenga esquinas redondeadas */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* esto hace que se genere volumen con sombra */
-    max-width: 1000px;
+    max-width: 100%;
     width: 90%;
     margin: 0 auto;
     border: 3px solid #551515 !important;
+    box-sizing: border-box;
 }
 
 .caja-item {
@@ -165,8 +153,6 @@ header h1 span {
     color: rgb(11, 9, 12);
     font-family: 'Plus Jakarta Sans', sans-serif;
     border: 1px solid #551515 !important;
-    
-
 }
 
 .caja-item h3 {
@@ -174,7 +160,7 @@ header h1 span {
     margin-top: 0;
     font-size: 16px;
     color: #2c183b;
-    font-size: 0.95 rem !important;
+    font-size: 0.95rem !important;
 }
 
 .caja-item p {
@@ -185,9 +171,8 @@ header h1 span {
     text-justify: inter-word;
     color: rgb(11, 9, 12);
     font-family: 'Outfit', sans-serif;
-  
-    
 }
+
 .intro-seccion h2{
     text-align: center;
     font-family: 'Outfit', sans-serif;
@@ -198,10 +183,7 @@ header h1 span {
 .intro-seccion p{
     text-align: center;
     font-family: 'Outfit', sans-serif;
-
 }
-
-
 
 /* esto hace que las 3 tarjetas se alineen horizontalmente en fila */
 .caja-de-imagenes {
@@ -213,7 +195,7 @@ header h1 span {
   max-width: 1100px !important;
   margin: 40px auto !important;
   padding: 0 20px !important;
-  
+  box-sizing: border-box;
 }
 
 /* esto hace que cada tarjeta de personaje se muestre con fondo blanco y sombra */
@@ -236,7 +218,7 @@ header h1 span {
 /* esto hace que la imagen dentro de la tarjeta se ajuste adecuadamente */
 .caja-de-imagenes img,
 .img-fondo {
-  width: 100 !important;
+  width: 100% !important;
   max-width: 200px !important;
   height: 200px !important;
   object-fit: contain !important;        /* esto hace que la imagen no se deforme */
@@ -259,4 +241,51 @@ header h1 span {
   font-size: 0.95rem !important;
   text-align: center !important;
   font-family: 'Outfit', sans-serif;
+}
+
+/* esto hace que la pagina se reorganice ordenadamente cuando se abra desde un celular */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header h1 span {
+        font-size: 28px;
+    }
+
+    .contenedor-nube {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .nube-img {
+        width: 200px;
+    }
+
+    .caja-texto {
+        position: relative;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: -30px;
+        -webkit-mask-image: none;
+        mask-image: none;
+        box-sizing: border-box;
+    }
+
+    .contenerdor-cajas {
+        flex-direction: column;
+        width: 95%;
+        padding: 15px;
+    }
+
+    .caja-de-imagenes {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
 }
