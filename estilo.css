@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    background-color: #e3e3cc;
+}
+
+/* esto hace que los elementos de la lista del menu se organicen en fila centrada */
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(235, 220, 220);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    color: rgba(7, 5, 5, 0.53);
+}
+
+.btn-login {
+    background-color: #0c3e70;
+    color: rgb(235, 220, 220) !important;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #041d37;
+    transform: translateY(-2px);
+}
+
+
+
+
+/* esto hace que la cabecera muestre la imagen con degradado oscuro */
+header {
+    /* esto hace que se mezcle el degradado oscuro transparente con la imagen de fondo */
+    background: linear-gradient(to right, rgba(10, 25, 50, 0.8) 0%, rgba(10, 25, 50, 0.4) 50%, transparent 100%), url('fondofinal_headerpp.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    /* esto hace que la parte inferior de la cabecera se difumine hacia transparente */
+    -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+/* esto hace que el titulo principal se ubique alineado con margen */
+header h1 {
+  display: inline-block;
+  margin-left: 1%;
+  margin-top: 40px; /* esto hace que se separe el titulo del menu */
+}
+
+
+header h1 span {
+  font-family: 'Outfit', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(235, 220, 220);
+}
+
+
+/* esto hace que el contenedor de la nube y la caja sirva de referencia para posicionar elementos */
+.contenedor-nube {
+    position: relative; /* esto hace que los elementos hijos se posicionen respecto a este contenedor */
+    display: inline-flex; /* esto hace que el contenedor se ajuste al tamano del contenido */
+    align-items: center; /* esto hace que la nube y la caja se centren verticalmente */
+    margin-left: 1%;
+    margin-top: -15px;
+}
+
+/* esto hace que la imagen de la nube se ubique al frente */
+.nube-img {
+    position: relative; /* esto hace que respete el orden de capas */
+    z-index: 2; /* esto hace que la nube quede por encima de la caja */
+    width: 280px; /* esto hace que la nube tenga un ancho de 280px */
+    height: auto;
+    display: block;
+}
+
+
+
+
+/* esto hace que la caja de texto salga por la derecha detras de la nube */
+.caja-texto {
+    position: absolute; /* esto hace que la caja se coloque exactamente respecto al contenedor */
+    left: 190px; /* esto hace que la caja se empuje a la derecha saliendo de la nube */
+    z-index: 1; /* esto hace que quede por detras de la nube */
+    
+    width: 400px; /* esto hace que la caja sea mas ancha para mas texto */
+    background-color: rgba(93, 136, 168, 0.95); /* esto hace que el fondo sea azul claro semitransparente */
+    
+    /* esto hace que haya espacio alrededor del texto dejando 90px a la izquierda */
+    padding: 20px 25px 20px 90px; 
+    
+    border-radius: 0 25px 25px 0; /* esto hace que se redondeen solo las esquinas de la derecha */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* esto hace que la caja tenga una sombra suave */
+
+    /* esto hace que el borde izquierdo de la caja sea invisible mediante degradado */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%);
+    mask-image: linear-gradient(to right, transparent 0%, black 15%);
+    border: 1.5px solid #551515 !important;
+    
+
+}
+
+/* esto hace que el texto dentro de la caja sea legible */
+.parrafo1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #fdf8f8;
+    font-size: 14px; /* esto hace que la letra sea de 14px para mejor lectura */
+    font-weight: 400;
+    line-height: 1.5; /* esto hace que haya espacio entre las lineas de texto */
+    margin: 0;
+    
+    /* esto hace que las palabras no se salgan del contenedor ni se corten mal */
+    white-space: normal;
+    word-break: break-word;
+}
+
+
+
+/* esto hace que el contenedor principal organice las 3 cajas en fila */
+.contenerdor-cajas {
+    display: flex;               /* esto hace que las 3 cajas se pongan una al lado de otra */
+    justify-content: space-between; /* esto hace que el espacio sobrante se distribuya entre las cajas */
+    gap: 20px;                   /* esto hace que haya 20px de separacion entre cajas */
+    
+    background-color:rgba(93, 136, 168, 0.95);   /* esto hace que el fondo del contenedor sea azul semitransparente */
+    padding: 25px;               /* esto hace que haya un espacio interno alrededor de las cajas */
+    border-radius: 15px;         /* esto hace que el contenedor tenga esquinas redondeadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* esto hace que se genere volumen con sombra */
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    border: 3px solid #551515 !important;
+}
+
+.caja-item {
+    flex: 1;                     /* esto hace que todas las cajas midan exactamente el mismo ancho */
+    background-color: rgba(255, 255, 255, 0.1); /* esto hace que cada item tenga fondo suave */
+    padding: 15px;
+    border-radius: 10px;
+    color: rgb(11, 9, 12);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border: 1px solid #551515 !important;
+    
+
+}
+
+.caja-item h3 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 16px;
+    color: #2c183b;
+    font-size: 0.95 rem !important;
+}
+
+.caja-item p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: justify;
+    text-justify: inter-word;
+    color: rgb(11, 9, 12);
+    font-family: 'Outfit', sans-serif;
+  
+    
+}
+.intro-seccion h2{
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    color: #2c183b;
+}
+
+.intro-seccion p{
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+
+}
+
+
+
+/* esto hace que las 3 tarjetas se alineen horizontalmente en fila */
+.caja-de-imagenes {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  gap: 35px !important;
+  max-width: 1100px !important;
+  margin: 40px auto !important;
+  padding: 0 20px !important;
+  
+}
+
+/* esto hace que cada tarjeta de personaje se muestre con fondo blanco y sombra */
+.caja-de-imagenes > div, 
+.tarjeta-personaje {
+  flex: 1 !important;
+  background-color: rgba(93, 136, 168, 0.95)!important; /* esto hace que resalte con fondo blanco */
+  border-radius: 20px !important;       /* esto hace que los bordes sean redondeados */
+  padding: 25px 15px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important; /* esto hace que de efecto de relieve */
+  border: 3px solid #551515 !important;
+  
+  display: flex !important;
+  flex-direction: column !important;    /* esto hace que se alinee la imagen arriba y el texto abajo */
+  align-items: center !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
+}
+
+/* esto hace que la imagen dentro de la tarjeta se ajuste adecuadamente */
+.caja-de-imagenes img,
+.img-fondo {
+  width: 100 !important;
+  max-width: 200px !important;
+  height: 200px !important;
+  object-fit: contain !important;        /* esto hace que la imagen no se deforme */
+  margin-bottom: 15px !important;
+}
+
+/* esto hace que el texto dentro de la tarjeta sea de color visible y centrado */
+.caja-de-imagenes h4 {
+  margin: 10px 0 5px 0 !important;
+  color: #030204 !important;            /* esto hace que el titulo tenga tono morado oscuro */
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  font-family: 'Outfit', sans-serif;
+}
+
+.caja-de-imagenes p {
+  margin: 0 !important;
+  color: rgb(0, 0, 0) ;
+  font-size: 0.95rem !important;
+  text-align: center !important;
+  font-family: 'Outfit', sans-serif;
+}
