@@ -5,7 +5,6 @@ body {
     background-color: #e3e3cc;
 }
 
-/* esto hace que los elementos de la lista del menu se organicen en fila centrada */
 .menu ul {
     display: flex;
     list-style: none;
@@ -32,7 +31,8 @@ body {
 
 .btn-login {
     background-color: #0c3e70;
-    color: rgb(235, 220, 220) !important;
+    color: rgb(235, 220, 220);
+    text-decoration: none;
     padding: 8px 18px;
     border-radius: 20px;
     font-weight: bold;
@@ -44,9 +44,9 @@ body {
     transform: translateY(-2px);
 }
 
-/* esto hace que la cabecera muestre la imagen con degradado oscuro */
+/* header muestra imagen con degradado oscuro */
 header {
-    /* esto hace que se mezcle el degradado oscuro transparente con la imagen de fondo */
+    /* mezcla degradado oscuro transparente con imagen de fondo */
     background: linear-gradient(to right, rgba(10, 25, 50, 0.8) 0%, rgba(10, 25, 50, 0.4) 50%, transparent 100%), url('fondofinal_headerpp.png');
     background-size: cover;
     background-position: center;
@@ -56,88 +56,84 @@ header {
     flex-direction: column;
     padding: 20px;
 
-    /* esto hace que la parte inferior de la cabecera se difumine hacia transparente */
+    /* difumina la parte inferior del header hacia transparente */
     -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
-/* esto hace que el titulo principal se ubique alineado con margen */
+/* estilo y alineacion del titulo principal */
 header h1 {
   display: inline-block;
   margin-left: 1%;
-  margin-top: 40px; /* esto hace que se separe el titulo del menu */
-}
-
-header h1 span {
+  margin-top: 40px;
   font-family: 'Outfit', sans-serif;
   font-size: 40px;
   font-weight: bold;
   color: rgb(235, 220, 220);
 }
-
-/* esto hace que el contenedor de la nube y la caja sirva de referencia para posicionar elementos */
+/* contenedor de referencia para posicionar elementos */
 .contenedor-nube {
-    position: relative; /* esto hace que los elementos hijos se posicionen respecto a este contenedor */
-    display: inline-flex; /* esto hace que el contenedor se ajuste al tamano del contenido */
-    align-items: center; /* esto hace que la nube y la caja se centren verticalmente */
+    position: relative; /* posiciona elementos hijos respecto a este contenedor */
+    display: inline-flex; /* ajusta el contenedor al tamano del contenido */
+    align-items: center;
     margin-left: 1%;
     margin-top: -15px;
 }
 
-/* esto hace que la imagen de la nube se ubique al frente */
+/* ubica la imagen de la nube al frente */
 .nube-img {
-    position: relative; /* esto hace que respete el orden de capas */
-    z-index: 2; /* esto hace que la nube quede por encima de la caja */
-    width: 280px; /* esto hace que la nube tenga un ancho de 280px */
+    position: relative; /* respeta el orden de capas */
+    z-index: 2; /* posiciona la nube por encima de la caja */
+    width: 280px; /* establece ancho de la nube en 280px */
     height: auto;
     display: block;
 }
 
-/* esto hace que la caja de texto salga por la derecha detras de la nube */
+/* muestra la caja de texto a la derecha detras de la nube */
 .caja-texto {
-    position: absolute; /* esto hace que la caja se coloque exactamente respecto al contenedor */
-    left: 190px; /* esto hace que la caja se empuje a la derecha saliendo de la nube */
-    z-index: 1; /* esto hace que quede por detras de la nube */
+    position: absolute; /* posiciona la caja respecto al contenedor */
+    left: 190px; /* empuja la caja a la derecha saliendo de la nube */
+    z-index: 1; /* ubica detras de la nube */
     
-    width: 400px; /* esto hace que la caja sea mas ancha para mas texto */
-    background-color: rgba(93, 136, 168, 0.95); /* esto hace que el fondo sea azul claro semitransparente */
+    width: 400px; 
+    background-color: rgba(93, 136, 168, 0.95); 
     
-    /* esto hace que haya espacio alrededor del texto dejando 90px a la izquierda */
+    /* espacio interno dejando 90px a la izquierda */
     padding: 20px 25px 20px 90px; 
     
-    border-radius: 0 25px 25px 0; /* esto hace que se redondeen solo las esquinas de la derecha */
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* esto hace que la caja tenga una sombra suave */
+    border-radius: 0 25px 25px 0; /* redondea solo esquinas derechas */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* aplica sombra suave */
 
-    /* esto hace que el borde izquierdo de la caja sea invisible mediante degradado */
+    /* difumina el borde izquierdo mediante degradado */
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%);
     mask-image: linear-gradient(to right, transparent 0%, black 15%);
     border: 1.5px solid #551515 !important;
 }
 
-/* esto hace que el texto dentro de la caja sea legible */
+
 .parrafo1 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #fdf8f8;
-    font-size: 14px; /* esto hace que la letra sea de 14px para mejor lectura */
+    font-size: 14px; 
     font-weight: 400;
-    line-height: 1.5; /* esto hace que haya espacio entre las lineas de texto */
+    line-height: 1.5; /* ajusta el espacio entre lineas */
     margin: 0;
     
-    /* esto hace que las palabras no se salgan del contenedor ni se corten mal */
+    /* evita que las palabras salgan del contenedor */
     white-space: normal;
     word-break: break-word;
 }
 
-/* esto hace que el contenedor principal organice las 3 cajas en fila */
-.contenerdor-cajas {
-    display: flex;               /* esto hace que las 3 cajas se pongan una al lado de otra */
-    justify-content: space-between; /* esto hace que el espacio sobrante se distribuya entre las cajas */
-    gap: 20px;                   /* esto hace que haya 20px de separacion entre cajas */
+/* organiza las 3 cajas principales en fila */
+.contenedor-cajas {
+    display: flex;             
+    justify-content: space-between; 
+    gap: 20px;                  
     
-    background-color:rgba(93, 136, 168, 0.95);   /* esto hace que el fondo del contenedor sea azul semitransparente */
-    padding: 25px;               /* esto hace que haya un espacio interno alrededor de las cajas */
-    border-radius: 15px;         /* esto hace que el contenedor tenga esquinas redondeadas */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* esto hace que se genere volumen con sombra */
+    background-color:rgba(93, 136, 168, 0.95);   
+    padding: 25px;               /* espacio interno alrededor de las cajas */
+    border-radius: 15px;       
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
     max-width: 100%;
     width: 90%;
     margin: 0 auto;
@@ -146,8 +142,8 @@ header h1 span {
 }
 
 .caja-item {
-    flex: 1;                     /* esto hace que todas las cajas midan exactamente el mismo ancho */
-    background-color: rgba(255, 255, 255, 0.1); /* esto hace que cada item tenga fondo suave */
+    flex: 1;                     /* iguala el ancho de todas las cajas */
+    background-color: rgba(255, 255, 255, 0.1); 
     padding: 15px;
     border-radius: 10px;
     color: rgb(11, 9, 12);
@@ -158,7 +154,6 @@ header h1 span {
 .caja-item h3 {
     text-align: center;
     margin-top: 0;
-    font-size: 16px;
     color: #2c183b;
     font-size: 0.95rem !important;
 }
@@ -185,7 +180,7 @@ header h1 span {
     font-family: 'Outfit', sans-serif;
 }
 
-/* esto hace que las 3 tarjetas se alineen horizontalmente en fila */
+/* alinea las 3 tarjetas horizontalmente */
 .caja-de-imagenes {
   display: flex !important;
   flex-direction: row !important;
@@ -198,37 +193,36 @@ header h1 span {
   box-sizing: border-box;
 }
 
-/* esto hace que cada tarjeta de personaje se muestre con fondo blanco y sombra */
 .caja-de-imagenes > div, 
 .tarjeta-personaje {
   flex: 1 !important;
-  background-color: rgba(93, 136, 168, 0.95)!important; /* esto hace que resalte con fondo blanco */
-  border-radius: 20px !important;       /* esto hace que los bordes sean redondeados */
+  background-color: rgba(93, 136, 168, 0.95)!important; 
+  border-radius: 20px !important;     
   padding: 25px 15px !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important; /* esto hace que de efecto de relieve */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
   border: 3px solid #551515 !important;
   
   display: flex !important;
-  flex-direction: column !important;    /* esto hace que se alinee la imagen arriba y el texto abajo */
+  flex-direction: column !important;    /* alinea imagen arriba y texto abajo */
   align-items: center !important;
   justify-content: space-between !important;
   box-sizing: border-box !important;
 }
 
-/* esto hace que la imagen dentro de la tarjeta se ajuste adecuadamente */
+
 .caja-de-imagenes img,
 .img-fondo {
   width: 100% !important;
   max-width: 200px !important;
   height: 200px !important;
-  object-fit: contain !important;        /* esto hace que la imagen no se deforme */
+  object-fit: contain !important;        /* evita que la imagen se deforme */
   margin-bottom: 15px !important;
 }
 
-/* esto hace que el texto dentro de la tarjeta sea de color visible y centrado */
+
 .caja-de-imagenes h4 {
   margin: 10px 0 5px 0 !important;
-  color: #030204 !important;            /* esto hace que el titulo tenga tono morado oscuro */
+  color: #030204 !important;            
   font-size: 1.2rem !important;
   font-weight: bold !important;
   text-align: center !important;
@@ -243,7 +237,7 @@ header h1 span {
   font-family: 'Outfit', sans-serif;
 }
 
-/* esto hace que la pagina se reorganice ordenadamente cuando se abra desde un celular */
+/* reorganiza el diseno para pantallas moviles */
 @media (max-width: 768px) {
     .menu ul {
         flex-direction: column;
@@ -278,7 +272,7 @@ header h1 span {
         box-sizing: border-box;
     }
 
-    .contenerdor-cajas {
+    .contenedor-cajas {
         flex-direction: column;
         width: 95%;
         padding: 15px;
