@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    background-color: #e3e3cc;
+    background-color: #e6c7d0;
 }
 
 .menu ul {
@@ -20,13 +20,13 @@ body {
     color: rgb(235, 220, 220);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     padding: 6px 12px;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .menu a:hover {
-    color: rgba(7, 5, 5, 0.53);
+    color:#0c3e70;
 }
 
 .btn-login {
@@ -35,8 +35,8 @@ body {
     text-decoration: none;
     padding: 8px 18px;
     border-radius: 20px;
-    font-weight: bold;
-    transition: all 0.3s ease;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-login:hover {
@@ -68,7 +68,7 @@ header h1 {
   margin-top: 40px;
   font-family: 'Outfit', sans-serif;
   font-size: 40px;
-  font-weight: bold;
+  font-weight: 600;
   color: rgb(235, 220, 220);
 }
 /* contenedor de referencia para posicionar elementos */
@@ -96,7 +96,8 @@ header h1 {
     z-index: 1; /* ubica detras de la nube */
     
     width: 400px; 
-    background-color: rgba(93, 136, 168, 0.95); 
+    background-color:  rgba(93, 136, 168, 0.95); /* color de fondo con transparencia */
+ 
     
     /* espacio interno dejando 90px a la izquierda */
     padding: 20px 25px 20px 90px; 
@@ -107,7 +108,7 @@ header h1 {
     /* difumina el borde izquierdo mediante degradado */
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%);
     mask-image: linear-gradient(to right, transparent 0%, black 15%);
-    border: 1.5px solid #551515 !important;
+    border: 1.5px solid #6098ae;
 }
 
 
@@ -130,14 +131,13 @@ header h1 {
     justify-content: space-between; 
     gap: 20px;                  
     
-    background-color:rgba(93, 136, 168, 0.95);   
+    background-color: rgba(93, 136, 168, 0.95);   
     padding: 25px;               /* espacio interno alrededor de las cajas */
     border-radius: 15px;       
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-    max-width: 100%;
-    width: 90%;
+   max-width: 1200px;
     margin: 0 auto;
-    border: 3px solid #551515 !important;
+    border: 2px solid #8eadb7;
     box-sizing: border-box;
 }
 
@@ -146,16 +146,16 @@ header h1 {
     background-color: rgba(255, 255, 255, 0.1); 
     padding: 15px;
     border-radius: 10px;
-    color: rgb(11, 9, 12);
+    color:  rgba(93, 136, 168, 0.95);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    border: 1px solid #551515 !important;
+    border: 1px solid #8eadb7;
 }
 
 .caja-item h3 {
     text-align: center;
     margin-top: 0;
-    color: #2c183b;
-    font-size: 0.95rem !important;
+    color: rgb(51, 7, 32);
+    font-size: 0.95rem;
 }
 
 .caja-item p {
@@ -164,87 +164,89 @@ header h1 {
     line-height: 1.4;
     text-align: justify;
     text-justify: inter-word;
-    color: rgb(11, 9, 12);
+    color: rgb(51, 7, 32);
     font-family: 'Outfit', sans-serif;
 }
 
-.intro-seccion h2{
+.intro-seccion h2 {
     text-align: center;
     font-family: 'Outfit', sans-serif;
-    font-weight: bold;
-    color: #2c183b;
+    font-weight: 600;
+    color: rgb(51, 7, 32);
 }
 
-.intro-seccion p{
+.intro-seccion p {
     text-align: center;
     font-family: 'Outfit', sans-serif;
+    color: rgb(51, 7, 32);
 }
 
 /* alinea las 3 tarjetas horizontalmente */
 .caja-de-imagenes {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: center !important;
-  align-items: stretch !important;
-  gap: 35px !important;
-  max-width: 1100px !important;
-  margin: 40px auto !important;
-  padding: 0 20px !important;
+  display: flex;
+  flex-direction: row ;
+  justify-content: center ;
+  align-items: stretch ;
+  gap: 35px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px ;
   box-sizing: border-box;
+  
 }
 
 .caja-de-imagenes > div, 
 .tarjeta-personaje {
-  flex: 1 !important;
-  background-color: rgba(93, 136, 168, 0.95)!important; 
-  border-radius: 20px !important;     
-  padding: 25px 15px !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
-  border: 3px solid #551515 !important;
+  flex: 1;
+  background-color:  rgba(93, 136, 168, 0.95) ; 
+  border-radius: 20px ;     
+  padding: 25px 15px ;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) ;
+  border: 3px solid #8eadb7 ;
   
-  display: flex !important;
-  flex-direction: column !important;    /* alinea imagen arriba y texto abajo */
-  align-items: center !important;
-  justify-content: space-between !important;
-  box-sizing: border-box !important;
+  display: flex ;
+  flex-direction: column ;    /* alinea imagen arriba y texto abajo */
+  align-items: center ;
+  justify-content: space-between ;
+  box-sizing: border-box ;
 }
 
 
 .caja-de-imagenes img,
 .img-fondo {
-  width: 100% !important;
-  max-width: 200px !important;
-  height: 200px !important;
-  object-fit: contain !important;        /* evita que la imagen se deforme */
-  margin-bottom: 15px !important;
+  width: 100% ;
+  max-width: 200px ;
+  height: 200px ;
+  object-fit: contain ;        /* evita que la imagen se deforme */
+  margin-bottom: 15px ;
 }
 
 
 .caja-de-imagenes h4 {
-  margin: 10px 0 5px 0 !important;
-  color: #030204 !important;            
-  font-size: 1.2rem !important;
-  font-weight: bold !important;
-  text-align: center !important;
+  margin: 10px 0 5px 0 ;
+  color: rgb(0, 0, 0) ;           
+  font-size: 1.2rem ;
+  font-weight: 600 ;
+  text-align: center ;
   font-family: 'Outfit', sans-serif;
 }
 
 .caja-de-imagenes p {
-  margin: 0 !important;
+  margin: 0 ;
   color: rgb(0, 0, 0) ;
-  font-size: 0.95rem !important;
-  text-align: center !important;
+  font-size: 0.95rem;
+  text-align: center;
   font-family: 'Outfit', sans-serif;
 }
 
 /* reorganiza el diseno para pantallas moviles */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .menu ul {
         flex-direction: column;
         gap: 12px;
     }
 
-    header h1 span {
+    header h1 {
         font-size: 28px;
     }
 
@@ -257,7 +259,8 @@ header h1 {
     }
 
     .nube-img {
-        width: 200px;
+        max-width: 200px;
+        width: 100%;
     }
 
     .caja-texto {
@@ -279,7 +282,7 @@ header h1 {
     }
 
     .caja-de-imagenes {
-        flex-direction: column !important;
-        gap: 20px !important;
+        flex-direction: column;
+        gap: 20px;
     }
 }
